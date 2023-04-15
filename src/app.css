@@ -1,0 +1,205 @@
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+
+
+#menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+
+  /*
+  #menu__toggle:checked ~ .menu__main {
+    margin-left: 150px; 
+    transition-duration: 0.25s;
+  }
+  */
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    top: 10px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: 0.25s;
+  }
+  .menu__btn > span::before {
+    content: "";
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: "";
+    top: 8px;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+  }
+  
+
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 150px; /* размер выхода бокового меню */
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #eceff1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.25s;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: rgba(51, 51, 51, 0.788);
+    font-family: "Roboto", sans-serif;
+    font-size: 15px; /* размер шрифта бокового меню */
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: 0.25s;
+  }
+  .menu__item:hover {
+    background-color: #cfd8dc;
+  }
+  .flex{
+    display: flex;
+  }
+  .bg-gray-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .shadow-md {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  .bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  }
+  .overflow-auto {
+    overflow: auto;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .h-10 {
+    height: 2.5rem;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .ml-0 {
+    margin-left: 0px;
+  }
+  ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  *, ::before, ::after {
+    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgba(59, 130, 246, 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+  }
+  *, ::before, ::after {
+    --tw-shadow: 0 0 #0000;
+  }
+  *, ::before, ::after {
+    --tw-border-opacity: 1;
+    border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+  }
+  *, ::before, ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+  }
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  .pt-8 {
+    padding-top: 2rem;
+  }
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .crd-grd-ln {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-items: center;
+    gap: 1rem;
+  }
+  .crd {
+    width: 100%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgba(243, 244, 246, var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+    padding: 0.5rem;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  .crd-hdr {
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 700;
+    --tw-text-opacity: 1;
+    color: rgba(107, 114, 128, var(--tw-text-opacity));
+  }
+  blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+    margin: 0;
+  }

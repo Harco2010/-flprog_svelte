@@ -29,7 +29,7 @@
            <div class="bg-cover pt-8 px-4">
               <div class="crd-grd-ln">
                 <div class="crd">
-                   <h1 class="crd-hdr">IoT Manager</h1>
+                   <h1 class="crd-hdr">flprog_svelte</h1>
                 </div> 
               </div>
            </div>

@@ -3,9 +3,6 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
 	plugins: [sveltekit()],
-	optimizeDeps: {
-		exclude: ['tinro']
-	},
 	server:{
 		port:3000
 	},
